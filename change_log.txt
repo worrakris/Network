@@ -1,0 +1,14 @@
+SOURCE:	https://drive.google.com/folderview?id=0B72Cg30tmqGKOXlJcjVlS1lrS00&usp=sharing
+
+NB V 0.1
+	- HOME
+	- NEWS & PROMOTIONS
+	- NEWS LIST
+	
+
+NB V 0.2 2014-06-30 19:09
+	- NEWS DETAIL
+	- PROMOTITONS LIST
+	- PROMOTITONS DETAIL
+	- CONTACT US
+	- HELP & FAQ

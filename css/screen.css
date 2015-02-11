@@ -1,0 +1,491 @@
+/* Display the appropraite logo in diff screen size */
+
+@media only screen and (max-width: 399px) {
+    #t1 {
+        display: none;
+    }
+    #head_btn {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 699px) {
+    #t1 {
+        display: none;
+    }
+    #head_btn {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 964px) {
+    #t1 {
+        display: none;
+    }
+    #head_btn {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 965px) {
+    #t2 {
+        display: none;
+    }
+}
+
+/* FONTS */
+@font-face {
+    font-family: abeatbyKai;
+    src: url(../fonts/ABEAKRG.TTF);
+}
+
+@font-face {
+    font-family: Lobster;
+    src: url(../fonts/Lobster-Regular.ttf);
+}
+
+@font-face {
+    font-family: myArial;
+    src: url(../fonts/arial.TTF);
+}
+
+@font-face {
+    font-family: ASansrounded;
+    src: url(../fonts/ASansrounded.TTF);
+}
+
+/* Universal reset: */
+*{
+    margin:0;
+    padding:0;
+    font-family:	abeatbyKai;
+}
+
+html, body { 
+    height: 100%; 
+    background-color: #f8f8f8;
+}
+
+html {
+    font-size: 62.5%; /* เพื่อให้ 1rem มีค่าประมาณ 10px */
+}
+
+body {
+    font-size: 1.4em;
+}
+
+table { border-collapse: collapse;}
+
+a:link		{text-decoration: none;}
+a:visited	{text-decoration: none;}
+a:hover		{text-decoration: none;}
+a:active	{text-decoration: none;}
+
+.page {
+    /*width :	100%;*/
+    height:	100%;
+    /*margin:	0 auto;*/
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.header {
+
+}
+
+.fullPage {
+    width: 100%;
+    margin: 0;
+}
+
+.fullHeader {
+    width: 100%;
+    height: 4.5rem;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background: #2F6295;
+    position: fixed;
+    z-index: 99;
+}
+
+.headNavigate {
+    float:right; 
+    color:#FFF; 
+    height:4.5rem; 
+    font-size:1.6rem; 
+    line-height:4.5rem;
+    text-align:center;
+    position:relative;
+}
+.headNavigate > div{
+    height: 4.5rem;
+    line-height: 4.5rem;
+    padding: 0px 9px;
+    float:left;
+    border-left:1px #4D78A4 solid;
+    border-right:1px #004B77 solid;
+}
+
+
+.logoBar {
+    width: 270px;
+    height: 4.5rem;
+    margin: 0;
+    top: 0;
+    left: 0;
+    background: #E1E1E1;
+    position: fixed;
+    z-index: 999;
+}
+
+.imgLogo {
+    height: 4.3rem;
+}
+
+.logoBar > div {
+    font-family: ASansrounded;
+    float: left;
+    color: black;
+    font-weight: bold;
+}
+
+table.layout {
+    /*    width :	100%;
+        height:	100%;*/
+}
+
+table.layout td {
+    /*border: solid 1px;*/
+}
+
+.header {
+
+}
+
+.content {
+}
+
+.footer {
+    /*background-image: url(../images/site/bg-footer.png);*/
+    color: whitesmoke;
+    text-align: center;
+    background-color: #2D2D2D;
+}
+
+.txt_copyright {
+    font-family: myArial;
+    font-size: 1.4rem;
+    padding-top: 15px;
+    color: #8c8c8c;
+}
+
+.popup__inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.w__inner	{
+    width: 	85%;
+    margin: 0 auto;
+    /*border: solid 1px;*/
+}
+.w__50px	{width: 	50px;}
+
+.w__50		{width: 	50%;}
+.w__100		{width: 	100%;}
+
+.h__100		{height: 	100%;}
+
+.pd__5px	{padding: 	5px;}
+.pd__8px	{padding: 	8px;}
+
+.f__bold {font-weight: bold;}
+
+.f__20px	{font-size: 20px;}
+
+.clear		{clear:		both;}
+
+.f__left 	{float: 	left;}
+.f__right 	{float: 	right;}
+
+.cursor		{cursor: pointer;}
+
+.nowrap		{white-space: nowrap}
+
+.subscribe__blog {
+    background-color: #f0f0f0;
+    border: solid 1px #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.subscribe__blog p {
+    display: inline;
+    //line-height: 		80px;
+    vertical-align: text-bottom;
+    text-align: center;
+    padding: 0px 5px;
+}
+
+.subscribe__blog input {
+    //padding: 10px 5px;
+    //width: 250px;
+}
+
+.subscribe__blog-text {
+    font-family: myArial;
+    font-size: 1.9rem;
+    color: #444;
+}
+
+.hr__home {
+    border:				0px;
+    height: 			1px;
+    color: 				#cfcfcf;
+    background-color:	#cfcfcf;
+}
+
+.txt_header {
+    padding-left: 5px;
+    font-family: ASansrounded;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0%;
+}
+
+.txt_header_inner {
+
+}
+
+.social__bar {
+    padding: 10px;
+    font-family: abeatbyKai;
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: right;
+    background-repeat: no-repeat;
+    background-position: 10px bottom;
+}
+.img_logo {
+    max-height: 100%;
+}
+.txt__home-head {
+    padding: 10px;
+    font-family: abeatbyKai;
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: left;
+    background-image: url(../images/site/line.png);
+    background-repeat: no-repeat;
+    background-position: 10px bottom;
+}
+
+.change__language-link {
+    background-image:		url(../images/site/button-language-1.png);
+    background-repeat:		no-repeat;
+    background-position: 	center;
+    font-size: 				12px;
+    color: 					#9e9e9e;
+}
+
+.change__language-active {
+    background-image:		url(../images/site/button-language-2.png);
+    background-repeat:		no-repeat;
+    background-position: 	center;
+    font-size: 				12px;
+    color: 					#ffffff;
+}
+
+/* LINKS */
+
+a.all:link , a.all:visited , a.all:active	{text-decoration: none; font-family: myArial; font-size: 17px; color: #b7b7b7; border: solid 2px; padding: 8px 25px;}
+a.all:hover		{text-decoration: none; font-family: myArial; font-size: 17px; color: #858585; border: solid 2px; padding: 8px 25px;}
+
+a.menu__top:link , a.menu__top:visited , a.menu__top:active	{
+    text-decoration: none; 
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white; 
+    //padding: 5px 5px;
+}
+a.menu__top:hover	{
+    text-decoration: none; 
+    font-size: 1.4rem; 
+    color: #A8C8FF; 
+    //padding: 5px 5px;
+}
+
+a.menu__bot:link , a.menu__bot:visited , a.menu__bot:active	{text-decoration: none; font-size: 15px; color: #0384ce; padding: 10px; line-height: 30px;}
+a.menu__bot:hover	{color: #3156a3;}
+
+a.head__text:link, a.head__text:visited, a.head__text:hover, a.head__text:active {
+    font-family: ASansrounded;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+a.btn__login:link , a.btn__login:visited , a.btn__login:active {
+    background-image: 		url(../images/button/button-login.png);
+    background-repeat:		no-repeat;
+    background-position: 	center;
+    font-family: 			ASansrounded;
+    font-size: 				22px;
+    color: 					#ffffff;
+    padding: 				10px 27px;
+}
+a.btn__login:hover {background-image: url(../images/button/button-sign-up.png);}
+
+a.btn__signup:link , a.btn__signup:visited , a.btn__signup:active {
+    background-image: 		url(../images/button/button-sign-up.png);
+    background-repeat:		no-repeat;
+    background-position: 	center;
+    font-family: 			ASansrounded;
+    font-size: 				22px;
+    color: 					#ffffff;
+    padding: 				10px 27px;
+}
+a.btn__signup:hover {background-image: url(../images/button/button-login.png);}
+
+a.btn__subscribe:link , a.btn__subscribe:visited , a.btn__subscribe:active {
+    background-image: 		url(../images/button/button-Subscribe.png);
+    background-repeat:		no-repeat;
+    background-position: 	center;
+    font-size: 				16px;
+    color: 					#ffffff;
+    padding: 				8px 29px;
+}
+a.btn__subscribe:hover {color: #afafaf;}
+
+a.btn__facebook:link , a.btn__facebook:visited , a.btn__facebook:active , a.btn__facebook:hover {
+    background-image: 		url(../images/button/button-fb.png);
+    background-repeat:		no-repeat;
+    background-position: 	center;
+    font-family: 			ASansrounded;
+    font-size: 				22px;
+    color: 					#ffffff;
+    padding: 				7px 85px;
+}
+
+a.btn__twitter:link , a.btn__twitter:visited , a.btn__twitter:active , a.btn__twitter:hover {
+    background-image: 		url(../images/button/button-tw.png);
+    background-repeat:		no-repeat;
+    background-position: 	center;
+    font-family: 			ASansrounded;
+    font-size: 				22px;
+    color: 					#ffffff;
+    padding: 				7px 85px;
+}
+
+a.btn__more-list:link , a.btn__more-list:visited , a.btn__more-list:active , a.btn__more-list:hover {
+    background-image: 		url(../images/button/buttom-read-more.jpg);
+    background-repeat:		no-repeat;
+    background-position: 	center;
+    font-family: 			myArial;
+    font-size: 				15px;
+    color: 					#ffffff;
+    padding: 				11px 48px 11px 10px;
+}
+
+
+a.page-split:link , a.page-split:visited , a.page-split:active {
+    margin: 			0px 5px;
+    padding:			15px 20px; 
+    text-decoration:	none; 
+    font-family:		myArial; 
+    font-size:			17px; 
+    color:				#c6c6c6; 
+    line-height:		40px; 
+    border:				solid 1px;
+}
+a.page-split:hover		{color: #0384ce}
+
+a.cpage-split:link , a.cpage-split:visited , a.cpage-split:active , a.cpage-split:hover {
+    margin: 			0px 5px;
+    padding:			15px 20px; 
+    text-decoration:	none; 
+    font-family:		myArial; 
+    font-size:			17px; 
+    color:				#0384ce; 
+    line-height:		40px; 
+    border:				solid 1px;
+}
+
+.form-box {
+
+}
+
+.login_header {
+    font-family: ASansrounded;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    color: black;
+}
+
+.login_body {
+    font-family: ASansrounded;
+    font-size: 1.8rem;
+}
+
+.form_font {
+    font-family: myArial;
+    font-size: 1.6rem;  
+}
+
+.errMessage {
+    color: red;
+    font-size: 1.1rem;
+}
+
+.btn_login {
+    font-family: ASansrounded;
+    padding: 5px;
+    background-color: royalblue;
+    border: 1px solid black;
+    font-size: 1.8rem;
+    width: 70%;
+    color: white;
+    font-weight: bold;
+}
+
+.rememberMeLogin {
+    font-family: ASansrounded;
+    font-size: 1.4rem;
+    margin-left: 15px;
+}
+
+.userImage {
+    max-width: 32px;
+    max-height: 32px;
+    display: inline-block;
+}
+
+.userProfileTab {
+    font-family: myArial;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: white;
+    display: inline;
+}
+
+.signup_tab {
+    position: fixed;
+    bottom: 1rem;
+    padding: 0 3rem;
+    right: 1rem;
+    background-color: #F33;
+    height: 4.5rem;
+}
+
+a.signup_link:link, a.signup_link:visited, a.signup_link:active,  a.signup_link:hover {
+    color: white;
+    font-family: Lobster;
+    font-size: 2.3rem;
+}
