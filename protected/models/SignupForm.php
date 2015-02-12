@@ -8,7 +8,8 @@
 
 class SignupForm extends CFormModel {
 
-    public $fullname;
+    public $firstname;
+    public $lastname;
     public $username;
     public $email;
     public $mobile;
