@@ -421,36 +421,42 @@ a.cpage-split:link , a.cpage-split:visited , a.cpage-split:active , a.cpage-spli
 }
 
 .login_header {
-    font-family: ASansrounded;
+    font-family: 'Maiandra GD', 'lucida grande',tahoma,verdana,arial,sans-serif;
     font-size: 3.5rem;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
     padding: 5px;
     color: black;
 }
 
 .login_body {
-    font-family: ASansrounded;
+    font-family: 'Maiandra GD', 'lucida grande',tahoma,verdana,arial,sans-serif;
+    font-size: 1.8rem;
+}
+
+.login_phase {
+    font-family: 'Maiandra GD', 'lucida grande',tahoma,verdana,arial,sans-serif;
     font-size: 1.8rem;
 }
 
 .form_font {
-    font-family: myArial;
+    font-family: 'Maiandra GD', 'lucida grande',tahoma,verdana,arial,sans-serif;
     font-size: 1.6rem;  
 }
 
 .errMessage {
+    font-family: 'Maiandra GD', 'lucida grande',tahoma,verdana,arial,sans-serif;
     color: red;
     font-size: 1.1rem;
 }
 
 .btn_login {
-    font-family: ASansrounded;
+    font-family: 'Maiandra GD', 'lucida grande',tahoma,verdana,arial,sans-serif;
     padding: 5px;
     background-color: royalblue;
     border: 1px solid black;
-    font-size: 1.8rem;
-    width: 70%;
+    font-size: 2.0rem;
+    width: 100%;
     color: white;
     font-weight: bold;
 }

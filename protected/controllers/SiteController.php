@@ -132,9 +132,10 @@ class SiteController extends Controller {
     }
 
     public function actionSignup() {
-        $model = new SignupForm;
+        $model = new SignupInfo;
 
         // if it is ajax validation request
+               
         $ajaxForm = filter_input(INPUT_POST, 'ajax');
         if (isset($ajaxForm) && $ajaxForm === 'signup-form') {
             echo CActiveForm::validate($model);

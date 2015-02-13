@@ -17,6 +17,7 @@ return array(
     'btn_login' => 'ログイン',  // SIGN IN
     'btn_logout' => 'サインアウト',  // Sign Out
     'btn_sign_up' => '今すぐ登録',  // SIGN UP
+    'phase_sign_up' => '来る＆ご参加、私たちの家族の一員てください',  // Please come & join us, be part of our family
     'head_news' => 'ニュース',  // News
     'head_promotion' => 'プロモーション',  // Promotion
     'btn_read_more' => '続きを読む  »',  // Read More

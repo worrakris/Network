@@ -96,8 +96,8 @@ Yii::app()->user->returnUrl = $http->getUrl();
                 $(".signupfancy").fancybox({
                     'openEffect': 'elastic',
                     'closeEffect': 'elastic',
-                    'maxWidth': 350,
-                    'maxHeight': 500,
+                    'maxWidth': 550,
+                    'maxHeight': 600,
                     'scrolling': 'no',
                     'iframe': {'scrolling': 'no'},
                     helpers: {
