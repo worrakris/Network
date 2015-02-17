@@ -97,7 +97,7 @@ Yii::app()->user->returnUrl = $http->getUrl();
                     'openEffect': 'elastic',
                     'closeEffect': 'elastic',
                     'maxWidth': 550,
-                    'maxHeight': 600,
+                    'maxHeight': 650,
                     'scrolling': 'no',
                     'iframe': {'scrolling': 'no'},
                     helpers: {

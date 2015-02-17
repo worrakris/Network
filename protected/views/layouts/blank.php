@@ -54,24 +54,27 @@ $session->open();
         <script type="text/javascript">
 
             $(document).ready(function () {
-
+                $(function () {
+                    $('[data-toggle="popover"]').popover()
+                });
+                
                 $('.thumbnail p').dotdotdot({
                     ellipsis: '...', /* The HTML to add as ellipsis. */
                     wrap: 'word', /* How to cut off the text/html: 'word'/'letter'/'children' */
                     watch: true /* Whether to update the ellipsis: true/'window' */
                 });
-                
-                $("#SignupForm_mobile").intlTelInput({
+
+                $("#SignupInfo_signup_mobile").intlTelInput({
                     defaultCountry: "auto",
                     utilsScript: "<?php echo $themePath ?>/lib/libphonenumber/build/utils.js",
-                }).blur(function() {
-                    var countryData = $("#SignupForm_mobile").intlTelInput("getSelectedCountryData");
+                }).blur(function () {
+                    var countryData = $("#SignupInfo_signup_mobile").intlTelInput("getSelectedCountryData");
                     $('#country').val(countryData.iso2);
                     //var ntlNumber = $("#SignupForm_mobile").intlTelInput("getNumber"); // จะคืนค่าแบบ +66817229599
-                    var ntlNumber = $("#SignupForm_mobile").intlTelInput("getNumber", intlTelInputUtils.numberFormat.NATIONAL); // จะคืนค่าแบบ 081 722 9599
+                    var ntlNumber = $("#SignupInfo_signup_mobile").intlTelInput("getNumber", intlTelInputUtils.numberFormat.NATIONAL); // จะคืนค่าแบบ 081 722 9599
                     $('#phoneNumber').val(ntlNumber.replace(/ /g, ''));
                 });
-                
+
             });
         </script>
 

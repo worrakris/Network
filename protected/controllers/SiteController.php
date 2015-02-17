@@ -55,19 +55,17 @@ class SiteController extends Controller {
         } else {
             $param = 'commission';
         }
-        
-        $this->render('myoffice' , array(
+
+        $this->render('myoffice', array(
             'page' => $param,
         ));
     }
-    
+
     public function actionCommission() {
-        $this->render('myoffice' , array(
+        $this->render('myoffice', array(
             'page' => 'commission',
         ));
     }
-    
-    
 
     /**
      * This is the action to handle external exceptions.
@@ -135,37 +133,37 @@ class SiteController extends Controller {
         $model = new SignupInfo;
 
         // if it is ajax validation request
-               
+
         $ajaxForm = filter_input(INPUT_POST, 'ajax');
         if (isset($ajaxForm) && $ajaxForm === 'signup-form') {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
 
-        if (isset($_POST['SignupForm'])) {
-            $model->attributes = $_POST['SignupForm'];
-            $model->mobile = $_POST['phoneNumber'];
+        if (isset($_POST['SignupInfo'])) {
+
             $country = $_POST['country'];
+            $signupDate = date("Y-m-d H:i:s");
+            $otpPass = "" . mt_rand(100000, 999999);
+            $model->attributes = $_POST['SignupInfo'];
+            $model->signup_mobile = $_POST['phoneNumber'];
+            $model->signup_code = $otpPass;
+            $model->signup_date = $signupDate;
+            $model->signup_birthday = date('Y-m-d H:i:s', strtotime($model->signup_birthday));
 
             if ($model->validate()) {
-
                 // Generate Ref.No. & OTP 
-                echo $today = time();
-                echo $tomorrow = mktime(date("H"), date("i"), date("s"), date("m"), date("d") + 1, date("Y"));
+                print_r($_POST['SignupInfo']);
+                $today = time();
+                $tomorrow = mktime(date("H"), date("i"), date("s"), date("m"), date("d") + 1, date("Y"));
                 $validtime = date("m/d/Y h:i:s A", $tomorrow);
-                $otpPass = "" . mt_rand(100000, 999999);
-
-                $otpModel = new OTPManage();
-                $otpModel->otp = $otpPass;
-                $otpModel->username = $model->username;
-                $otpModel->create_date = date("Y-m-d H:i:s", $today);
-                $otpModel->expire_date = date("Y-m-d H:i:s", $tomorrow);
                 $refNo = 0;
-                if ($otpModel->save()) {
-                    $refNo = $otpModel->ref_no;
-                }
+                $model->signup_password = md5($model->signup_password);
+                $model->signup_repassword = md5($model->signup_repassword);
+                if ($model->save()) {
+                    $refNo = $model->signup_id;
 
-                // Send OTP Password
+                    // Send OTP Password
 //                $name = '=?UTF-8?B?' . base64_encode(Yii::t('emai;', 'sender')) . '?=';
 //                $subject = '=?UTF-8?B?' . base64_encode(Yii::t('email', 'subject_welcome')) . '?=';
 //                $headers = "From: $name <{$model->email}>\r\n" .
@@ -176,7 +174,7 @@ class SiteController extends Controller {
 //                $otp_msg = Yii::t('email', 'msg_otp', array('{otppass}' => '123456', '{refno}' => '654321', '{validtime}' => $validtime));
 //
 //                mail($model->email, $subject, $model->body, $headers);
-                // Send Welcome e-Mail
+                    // Send Welcome e-Mail
 //                $name = '=?UTF-8?B?' . base64_encode(Yii::t('email', 'sender')) . '?=';
 //                $subject = '=?UTF-8?B?' . base64_encode(Yii::t('email', 'subject_welcome')) . '?=';
 //                $headers = "From: $name <" . Yii::app()->params['adminEmail'] . ">\r\n" .
@@ -186,11 +184,18 @@ class SiteController extends Controller {
 //                $content = Yii::t('email', 'msg_welcome', array('{emailAddr}' => $model->email, '{linkUrl}' => 'Click Here', '{helpdesk}' => Yii::app()->params['helpdeskEmail']));
 //
 //                mail($model->email, $subject, $content, $headers);
-//                $actModel = new SignupForm;
-//                $this->render('activate', array('model' => $actModel));
+                    $this->redirect(array('activate', 'signup_id' => $refNo));
+                    //$this->render('activate', array('model' => $actModel));
+                }
+                print_r($model->errors);
             }
         }
+
         $this->render('signup', array('model' => $model));
+    }
+
+    public function actionActivate() {
+        $this->render('activate');
     }
 
     /**

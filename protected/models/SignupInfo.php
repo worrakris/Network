@@ -12,6 +12,7 @@
  * @property string $signup_birthday
  * @property string $signup_username
  * @property string $signup_password
+ * @property string $signup_repassword
  * @property string $signup_code
  * @property string $signup_date
  * @property string $signup_status
@@ -21,6 +22,8 @@ class SignupInfo extends CActiveRecord {
     /**
      * @return string the associated database table name
      */
+    public $signup_repassword;
+    
     public function tableName() {
         return 'tbl_signup_info';
     }
@@ -32,13 +35,17 @@ class SignupInfo extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('signup_firstname, signup_lastname, signup_email, signup_mobile, signup_username, signup_password, signup_code, signup_date', 'required'),
+            array('signup_birthday, signup_firstname, signup_lastname, signup_email, signup_mobile, signup_username, signup_password, signup_repassword', 'required'),
             array('signup_firstname, signup_lastname, signup_email', 'length', 'max' => 250),
-            array('signup_mobile, signup_password', 'length', 'max' => 100),
+            array('signup_mobile', 'length', 'max' => 100),
+            array('signup_password, signup_repassword', 'length', 'min' => 6, 'max' => 100),
+            array('signup_password', 'match', 'pattern' => '/^(?=.*\d.*\d)[0-9A-Za-z!@#$%*]{6,}$/'),
+            array('signup_repassword', 'compare', 'compareAttribute'=>'signup_password'),
             array('signup_username', 'length', 'max' => 20),
             array('signup_code', 'length', 'max' => 10),
             array('signup_status', 'length', 'max' => 9),
             array('signup_birthday', 'safe'),
+            //array('signup_email', 'unique'),
             array('signup_email', 'email'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
@@ -61,17 +68,18 @@ class SignupInfo extends CActiveRecord {
      */
     public function attributeLabels() {
         return array(
-            'signup_id' => 'Sign up ID',
-            'signup_firstname' => 'First name',
-            'signup_lastname' => 'Last name',
-            'signup_email' => 'E-Mail',
-            'signup_mobile' => 'Mobile Number',
-            'signup_birthday' => 'Birthday',
-            'signup_username' => 'Username',
-            'signup_password' => 'Password',
-            'signup_code' => 'Signup Code',
-            'signup_date' => 'Sign up Date',
-            'signup_status' => 'Sign up status',
+            'signup_id' => Yii::t('home', 'signup_id'),
+            'signup_firstname' => Yii::t('home', 'signup_firstname'),
+            'signup_lastname' => Yii::t('home', 'signup_lastname'),
+            'signup_email' => Yii::t('home', 'signup_email'),
+            'signup_mobile' => Yii::t('home', 'signup_mobile'),
+            'signup_birthday' => Yii::t('home', 'signup_birthday'),
+            'signup_username' => Yii::t('home', 'signup_username'),
+            'signup_password' => Yii::t('home', 'signup_password'),
+            'signup_repassword' => Yii::t('home', 'signup_repassword'),
+            'signup_code' => Yii::t('home', 'signup_code'),
+            'signup_date' => Yii::t('home', 'signup_date'),
+            'signup_status' => Yii::t('home', 'signup_status'),
         );
     }
 

@@ -439,6 +439,16 @@ a.cpage-split:link , a.cpage-split:visited , a.cpage-split:active , a.cpage-spli
     font-size: 1.8rem;
 }
 
+.form_popup {
+    font-family: Tahoma;
+    font-size: 1.2rem;
+}
+
+.form_privacy {
+    font-family: Tahoma;
+    font-size: 1rem;
+}
+
 .form_font {
     font-family: 'Maiandra GD', 'lucida grande',tahoma,verdana,arial,sans-serif;
     font-size: 1.6rem;  
