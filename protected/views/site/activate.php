@@ -1,4 +1,6 @@
 <?php
 $this->layout = 'blank';
 ?>
-Activate <?php echo $_GET['signup_id']; ?>
+<div>
+    Activate
+</div>

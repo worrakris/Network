@@ -23,7 +23,7 @@ class SignupInfo extends CActiveRecord {
      * @return string the associated database table name
      */
     public $signup_repassword;
-    
+
     public function tableName() {
         return 'tbl_signup_info';
     }
@@ -37,16 +37,17 @@ class SignupInfo extends CActiveRecord {
         return array(
             array('signup_birthday, signup_firstname, signup_lastname, signup_email, signup_mobile, signup_username, signup_password, signup_repassword', 'required'),
             array('signup_firstname, signup_lastname, signup_email', 'length', 'max' => 250),
+            array('signup_email', 'email'),
+            array('signup_email', 'unique', 'className' => 'SignupInfo', 'attributeName' => 'signup_email'),
             array('signup_mobile', 'length', 'max' => 100),
             array('signup_password, signup_repassword', 'length', 'min' => 6, 'max' => 100),
             array('signup_password', 'match', 'pattern' => '/^(?=.*\d.*\d)[0-9A-Za-z!@#$%*]{6,}$/'),
-            array('signup_repassword', 'compare', 'compareAttribute'=>'signup_password'),
+            array('signup_repassword', 'compare', 'compareAttribute' => 'signup_password'),
             array('signup_username', 'length', 'max' => 20),
+            array('signup_username', 'unique', 'className' => 'SignupInfo', 'attributeName' => 'signup_username'),
             array('signup_code', 'length', 'max' => 10),
             array('signup_status', 'length', 'max' => 9),
             array('signup_birthday', 'safe'),
-            //array('signup_email', 'unique'),
-            array('signup_email', 'email'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('signup_id, signup_firstname, signup_lastname, signup_email, signup_mobile, signup_birthday, signup_username, signup_password, signup_code, signup_date, signup_status', 'safe', 'on' => 'search'),

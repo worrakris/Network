@@ -55,18 +55,19 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li <?php if ($page=='commission') echo "class='active'"; ?>><?php echo CHtml::link(Yii::t('myoffice', 'mnu_commission'), array('myoffice', 'page'=>'commission'), array('class' => '')); ?></li>
-                    <li <?php if ($page=='shop') echo "class='active'"; ?>><?php echo CHtml::link(Yii::t('myoffice', 'mnu_shop'), array('myoffice', 'page'=>'shop'), array('class' => '')); ?></li>
-                    <li <?php if ($page=='profile') echo "class='active'"; ?>><?php echo CHtml::link(Yii::t('myoffice', 'mnu_profile'), array('myoffice', 'page'=>'profile'), array('class' => '')); ?></li>
-                    <li <?php if ($page=='family') echo "class='active'"; ?>><?php echo CHtml::link(Yii::t('myoffice', 'mnu_family'), array('myoffice', 'page'=>'family'), array('class' => '')); ?></li>
-                    <li <?php if ($page=='bank') echo "class='active'"; ?>><?php echo CHtml::link(Yii::t('myoffice', 'mnu_bank'), array('myoffice', 'page'=>'bank'), array('class' => '')); ?></li>
+                    <li <?php if ($page == 'commission') echo "class='active'"; ?>><?php echo CHtml::link(Yii::t('myoffice', 'mnu_commission'), array('myoffice', 'page' => 'commission'), array('class' => '')); ?></li>
+                    <li <?php if ($page == 'shop') echo "class='active'"; ?>><?php echo CHtml::link(Yii::t('myoffice', 'mnu_shop'), array('myoffice', 'page' => 'shop'), array('class' => '')); ?></li>
+                    <li <?php if ($page == 'profile') echo "class='active'"; ?>><?php echo CHtml::link(Yii::t('myoffice', 'mnu_profile'), array('myoffice', 'page' => 'profile'), array('class' => '')); ?></li>
+                    <li <?php if ($page == 'family') echo "class='active'"; ?>><?php echo CHtml::link(Yii::t('myoffice', 'mnu_family'), array('myoffice', 'page' => 'family'), array('class' => '')); ?></li>
+                    <li <?php if ($page == 'bank') echo "class='active'"; ?>><?php echo CHtml::link(Yii::t('myoffice', 'mnu_bank'), array('myoffice', 'page' => 'bank'), array('class' => '')); ?></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <section id="myoffice_content">
+    <div class="row">
         <?php
         $this->renderPartial("_$page");
         ?>
-    </section>
+    </div>
+
 </div>

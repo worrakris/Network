@@ -103,7 +103,8 @@ Yii::app()->user->returnUrl = $http->getUrl();
                     helpers: {
                         overlay: {
                             'closeClick': false,
-                        }, }
+                        }, 
+                    },
                 });
 
             });

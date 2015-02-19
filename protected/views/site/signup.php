@@ -1,7 +1,6 @@
 <?php
 $this->layout = 'blank';
 ?>
-
 <div class="form-box" id="signup-box">
     <div class="login_header"><?php echo Yii::t('home', 'btn_sign_up'); ?></div>
     <div class="login_phase"><?php echo Yii::t('home', 'phase_sign_up'); ?></div>
@@ -11,15 +10,16 @@ $this->layout = 'blank';
         $form = $this->beginWidget('CActiveForm', array(
             'id' => 'sign-form',
             'enableAjaxValidation' => true,
-            'stateful' => true,
+            'stateful' => false,
             'enableClientValidation' => true,
             'clientOptions' => array(
                 'validateOnSubmit' => true,
             ),
+            'htmlOptions' => array(
+                'target' => '_top',
+            ),
         ));
-        echo $form->errorSummary($model);
         ?>
-
         <div class="login_body">
             <div class="row"> <!-- First name &  Last name Section -->
                 <span style="float:left; width: 50%; padding: 0px 3px;">
@@ -42,7 +42,7 @@ $this->layout = 'blank';
                     <div class="form-group">
                         <?php //echo $form->labelEx($model, 'signup_email', array('class' => 'form_font')); ?>
                         <?php echo $form->textField($model, 'signup_email', array('placeholder' => $model->getAttributeLabel('signup_email'), 'class' => 'form-control form_font')); ?>
-                        <?php echo $form->error($model, 'signup_email', array('class' => 'errMessage')); ?>
+                        <?php echo $form->error($model, 'signup_email', array('inputID'=>'signup_email', 'class' => 'errMessage')); ?>
                     </div>          
                 </span>
             </div> <!-- END -->   
@@ -60,7 +60,7 @@ $this->layout = 'blank';
                     <div class="form-group">
                         <?php echo $form->labelEx($model, 'signup_birthday', array('class' => 'form_font')); ?>
                         &nbsp;&nbsp;<a href="#" class="btn form_popup" data-trigger="focus" data-toggle="popover" data-placement="top" data-content="<?php echo Yii::t('home', 'helpmsg_signup_birthday'); ?>"><?php echo Yii::t('home', 'help_signup_birthday'); ?></a>
-                        <?php echo $form->dateField($model, 'signup_birthday', array('class' => 'form-control form_font', 'value'=>'0000-00-00')); ?>
+                        <?php echo $form->dateField($model, 'signup_birthday', array('class' => 'form-control form_font', 'value' => '0000-00-00')); ?>
                         <?php echo $form->error($model, 'signup_birthday', array('class' => 'errMessage')); ?>
                     </div>
                 </span>
@@ -103,10 +103,9 @@ $this->layout = 'blank';
             <?php echo CHtml::hiddenField('country'); ?>
             <?php echo CHtml::hiddenField("phoneNumber"); ?>
             <div class="row buttons" style="text-align: center">
-                <?php echo CHtml::submitButton(Yii::t('home', 'btn_sign_up'), array('class' => 'btn_login', 'name'=>'btnSubmit')); ?>
+                <?php echo CHtml::submitButton(Yii::t('home', 'btn_sign_up'), array('class' => 'btn_login', 'name' => 'btnSubmit')); ?>
             </div>
         </div>
-
         <?php $this->endWidget(); ?>
     </div>
 </div>

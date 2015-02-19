@@ -130,6 +130,9 @@ class SiteController extends Controller {
     }
 
     public function actionSignup() {
+
+        $isSaved = FALSE;
+
         $model = new SignupInfo;
 
         // if it is ajax validation request
@@ -153,7 +156,6 @@ class SiteController extends Controller {
 
             if ($model->validate()) {
                 // Generate Ref.No. & OTP 
-                print_r($_POST['SignupInfo']);
                 $today = time();
                 $tomorrow = mktime(date("H"), date("i"), date("s"), date("m"), date("d") + 1, date("Y"));
                 $validtime = date("m/d/Y h:i:s A", $tomorrow);
@@ -162,6 +164,7 @@ class SiteController extends Controller {
                 $model->signup_repassword = md5($model->signup_repassword);
                 if ($model->save()) {
                     $refNo = $model->signup_id;
+                    //$isSaved = TRUE;
 
                     // Send OTP Password
 //                $name = '=?UTF-8?B?' . base64_encode(Yii::t('emai;', 'sender')) . '?=';
@@ -184,14 +187,18 @@ class SiteController extends Controller {
 //                $content = Yii::t('email', 'msg_welcome', array('{emailAddr}' => $model->email, '{linkUrl}' => 'Click Here', '{helpdesk}' => Yii::app()->params['helpdeskEmail']));
 //
 //                mail($model->email, $subject, $content, $headers);
-                    $this->redirect(array('activate', 'signup_id' => $refNo));
+                    //$this->renderPartial('activate', array('signup_id' => $refNo));
+                    $this->redirect($this->createUrl('site/activate', array('signup_id' => $refNo)), true);
                     //$this->render('activate', array('model' => $actModel));
                 }
-                print_r($model->errors);
             }
         }
 
-        $this->render('signup', array('model' => $model));
+        if ($isSaved) {
+            $this->render('signup', array('refNo' => $refNo));
+        } else {
+            $this->render('signup', array('model' => $model));
+        }
     }
 
     public function actionActivate() {
