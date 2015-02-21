@@ -92,6 +92,7 @@
 </style>
 
 <?php
+$member = Member::model()->findByPk(Yii::app()->user->id);
 ?>
 
 <section id="my_commission">
@@ -103,7 +104,10 @@
             </div>
         </div>
         <div class="col-lg-8 col-md-8 col-sm-8">
-
+            
+            <?php 
+            echo Yii::app()->user->fullname;
+            ?>
         </div>
     </div>
 </section>
