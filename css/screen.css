@@ -285,6 +285,18 @@ table.layout td {
     background-position: 10px bottom;
 }
 
+.txt__home-sub-head {
+    padding: 10px;
+    font-family: abeatbyKai;
+    color: #000000;
+    font-size: 1.9rem;
+    font-weight: bold;
+    text-align: left;
+    background-image: url(../images/site/line.png);
+    background-repeat: no-repeat;
+    background-position: 10px bottom;
+}
+
 .change__language-link {
     background-image:		url(../images/site/button-language-1.png);
     background-repeat:		no-repeat;
@@ -504,4 +516,11 @@ a.signup_link:link, a.signup_link:visited, a.signup_link:active,  a.signup_link:
     color: white;
     font-family: Lobster;
     font-size: 2.3rem;
+}
+
+.profile_box {
+    padding: 5px 10px;
+    //border-radius: 10px;
+    //border: #A5A5A5 solid 2px;
+    margin: 10px;     
 }

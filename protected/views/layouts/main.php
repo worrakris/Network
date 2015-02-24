@@ -49,7 +49,7 @@ Yii::app()->user->returnUrl = $http->getUrl();
         $cs->registerScriptFile($themePath . '/js/jquery.mousewheel-3.0.6.pack.js', CClientScript::POS_END);
         $cs->registerScriptFile($themePath . '/js/jquery.fancybox.pack.js?v=2.1.5', CClientScript::POS_END);
         $cs->registerScriptFile($themePath . '/js/intlTelInput.min.js', CClientScript::POS_END);
-        
+        $cs->registerScriptFile($themePath . '/js/jquery.slimscroll.min.js', CClientScript::POS_END);
         ?>
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -90,9 +90,16 @@ Yii::app()->user->returnUrl = $http->getUrl();
                     'maxWidth': 350,
                     'maxHeight': 350,
                     'scrolling': 'no',
-                    'iframe': {'scrolling': 'no'},
+                    'iframe': {'scrolling': 'no'}
                 });
-
+                
+//                $('#shop-list').slimScroll({
+//                    height: '250px',
+//                    size: '10px',
+//                    alwaysVisible: true,
+//                    railVisible: true;
+//                });
+                
                 $(".signupfancy").fancybox({
                     'openEffect': 'elastic',
                     'closeEffect': 'elastic',
@@ -103,7 +110,7 @@ Yii::app()->user->returnUrl = $http->getUrl();
                     helpers: {
                         overlay: {
                             'closeClick': false,
-                        }, 
+                        },
                     },
                 });
 
@@ -168,7 +175,7 @@ Yii::app()->user->returnUrl = $http->getUrl();
                         } else {
                             ?>
                             <a href="<?php echo Yii::app()->createAbsoluteUrl("/site/login"); ?>"  class="menu__top loginfancy" data-fancybox-type="iframe" style="font-size: 2rem;"><?php echo Yii::t('home', 'btn_login'); ?></a>
-                            <!--<a href="" class="btn btn-primary btn-lg" ><?php // echo Yii::t('home', 'btn_sign_up');      ?></a>-->
+                            <!--<a href="" class="btn btn-primary btn-lg" ><?php // echo Yii::t('home', 'btn_sign_up');       ?></a>-->
                             <div class="signup_tab">
                                 <a href="<?php echo Yii::app()->createAbsoluteUrl("/site/signup"); ?>" class="signup_link signupfancy" data-fancybox-type="iframe">
                                     Sign Up NOW!!!

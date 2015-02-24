@@ -244,5 +244,9 @@ class SiteController extends Controller {
         }
         $this->renderPartial('_subscribe', array('model' => $model));
     }
+    
+    public function actionCommissionHistory() {   
+        $this->renderPartial("_commission_history", array('viewType' => $_POST['viewType'])); 
+    }
 
 }

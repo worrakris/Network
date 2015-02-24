@@ -33523,3 +33523,546 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/Network/signup
 ---
+2015/02/22 09:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "site".' in C:\wamp\www\Network\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(270): CController->missingAction('site')
+#1 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('site')
+#2 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/site/logou...')
+#3 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Network\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Network/site/site/logout
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/22 09:13:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/member/m2/profile/picture_150314112251343.jpg".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/member/m...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/member/m2/profile/picture_150314112251343.jpg
+HTTP_REFERER=http://localhost/Network/site/index
+---
+2015/02/22 09:13:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/member/m2/profile/picture_150314112251343.jpg".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/member/m...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/member/m2/profile/picture_150314112251343.jpg
+HTTP_REFERER=http://localhost/Network/
+---
+2015/02/22 09:14:57 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.user_id" is not defined.' in C:\wamp\www\Network\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\Network\framework\base\CModule.php(105): CComponent->__get('user_id')
+#1 C:\wamp\www\Network\protected\views\site\_commission.php(96): CModule->__get('user_id')
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', NULL, true)
+#4 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', NULL, true)
+#5 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): CController->renderPartial('_commission')
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#8 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#9 C:\wamp\www\Network\protected\views\site\myoffice.php(9): CController->renderPartial('_myoffice', Array)
+#10 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#11 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#12 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#13 C:\wamp\www\Network\framework\web\CController.php(782): CController->renderPartial('myoffice', Array, true)
+#14 C:\wamp\www\Network\protected\controllers\SiteController.php(61): CController->render('myoffice', Array)
+#15 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#16 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\wamp\www\Network\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\wamp\www\Network\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('myoffice')
+#20 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/myoffice')
+#21 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\wamp\www\Network\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/Network/site/myoffice
+HTTP_REFERER=http://localhost/Network/
+---
+2015/02/22 09:15:30 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\Network\framework\db\schema\CDbCommandBuilder.php:820)
+Stack trace:
+#0 C:\wamp\www\Network\protected\views\site\_commission.php(96): MemberRelationship->findByPk()
+#1 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#5 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#7 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#8 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#9 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#10 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#11 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#12 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#13 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#14 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#15 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#17 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#18 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#19 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (96)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/22 09:18:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/member/m2/profile/picture_150314112251343.jpg".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/member/m...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/member/m2/profile/picture_150314112251343.jpg
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/22 09:24:26 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\Network\framework\db\schema\CDbCommandBuilder.php:820)
+Stack trace:
+#0 C:\wamp\www\Network\protected\views\site\_commission.php(98): MemberRelationship->findByPk()
+#1 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#3 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#4 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#5 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#7 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#8 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#9 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#10 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#11 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#12 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#13 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#14 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#15 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#17 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#18 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#19 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (98)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/22 09:30:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/member/m2/profile/picture_150314112251343.jpg".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/member/m...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/member/m2/profile/picture_150314112251343.jpg
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/22 09:32:43 [error] [exception.CException] exception 'CException' with message 'Property "MemberRelationship.parent_id" is not defined.' in C:\wamp\www\Network\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(145): CComponent->__get('parent_id')
+#1 C:\wamp\www\Network\protected\views\site\_commission.php(100): CActiveRecord->__get('parent_id')
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', NULL, true)
+#4 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', NULL, true)
+#5 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): CController->renderPartial('_commission')
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#8 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#9 C:\wamp\www\Network\protected\views\site\myoffice.php(9): CController->renderPartial('_myoffice', Array)
+#10 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#11 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#12 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#13 C:\wamp\www\Network\framework\web\CController.php(782): CController->renderPartial('myoffice', Array, true)
+#14 C:\wamp\www\Network\protected\controllers\SiteController.php(61): CController->render('myoffice', Array)
+#15 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#16 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\wamp\www\Network\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 C:\wamp\www\Network\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('myoffice')
+#20 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/myoffice')
+#21 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\wamp\www\Network\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/Network/site/myoffice
+HTTP_REFERER=http://localhost/Network/
+---
+2015/02/22 09:33:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/member/m2/profile/picture_150314112251343.jpg".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/member/m...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/member/m2/profile/picture_150314112251343.jpg
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/22 09:40:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/member/m2/profile/picture_150314112251343.jpg".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/member/m...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/member/m2/profile/picture_150314112251343.jpg
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/22 16:46:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/site/comm_box.png".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/site/com...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/site/comm_box.png
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/22 20:54:09 [error] [php] Object of class MemberRelationship could not be converted to string (C:\wamp\www\Network\framework\db\schema\CDbColumnSchema.php:146)
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1535): CMysqlCommandBuilder->createColumnCriteria()
+#1 C:\wamp\www\Network\protected\views\site\_commission.php(136): MemberRelationship->findAllByAttributes()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#9 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#10 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#11 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#12 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#13 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#14 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#15 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#16 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#18 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#19 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#20 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (136)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/23 00:39:42 [error] [php] Object of class MemberRelationship could not be converted to string (C:\wamp\www\Network\framework\db\schema\CDbColumnSchema.php:146)
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1535): CMysqlCommandBuilder->createColumnCriteria()
+#1 C:\wamp\www\Network\protected\views\site\_commission.php(134): MemberRelationship->findAllByAttributes()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#9 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#10 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#11 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#12 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#13 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#14 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#15 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#16 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#18 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#19 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#20 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (134)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/23 01:01:45 [error] [php] Undefined variable: i (C:\wamp\www\Network\protected\views\site\_commission.php:133)
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#9 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#10 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#11 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#12 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (133)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/23 01:01:59 [error] [php] Object of class MemberRelationship could not be converted to string (C:\wamp\www\Network\framework\db\schema\CDbColumnSchema.php:146)
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1535): CMysqlCommandBuilder->createColumnCriteria()
+#1 C:\wamp\www\Network\protected\views\site\_commission.php(138): MemberRelationship->findAllByAttributes()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#9 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#10 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#11 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#12 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#13 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#14 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#15 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#16 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#18 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#19 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#20 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (138)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/23 01:05:36 [error] [php] Undefined variable: grandChild (C:\wamp\www\Network\protected\views\site\_commission.php:141)
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#9 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#10 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#11 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#12 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (141)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/23 04:20:39 [error] [php] Undefined variable: viewType (C:\wamp\www\Network\protected\views\site\_commission.php:243)
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#9 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#10 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#11 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#12 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (243)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/23 04:22:57 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "_commision_history".' in C:\wamp\www\Network\framework\web\CController.php:878
+Stack trace:
+#0 C:\wamp\www\Network\protected\views\site\_commission.php(243): CController->renderPartial('_commision_hist...', Array)
+#1 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', NULL, true)
+#3 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', NULL, true)
+#4 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): CController->renderPartial('_commission')
+#5 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#7 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#8 C:\wamp\www\Network\protected\views\site\myoffice.php(9): CController->renderPartial('_myoffice', Array)
+#9 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#10 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#11 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#12 C:\wamp\www\Network\framework\web\CController.php(782): CController->renderPartial('myoffice', Array, true)
+#13 C:\wamp\www\Network\protected\controllers\SiteController.php(61): CController->render('myoffice', Array)
+#14 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#15 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\Network\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\Network\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('myoffice')
+#19 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/myoffice')
+#20 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 C:\wamp\www\Network\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/Network/site/myoffice
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/23 04:39:49 [error] [php] Undefined variable: viewedtype (C:\wamp\www\Network\protected\views\site\_commission.php:244)
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#9 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#10 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#11 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#12 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (244)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/23 04:40:14 [error] [php] Undefined variable: viewType (C:\wamp\www\Network\protected\views\site\_commission.php:246)
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#9 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#10 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#11 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#12 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (246)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/23 04:41:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "_commission_history".' in C:\wamp\www\Network\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(270): CController->missingAction('_commission_his...')
+#1 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('_commission_his...')
+#2 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/_commissio...')
+#3 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Network\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Network/site/_commission_history?viewType=js%3A+%24%28this%29.val%28%29
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/23 04:51:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "commissionHistory".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('commissionHisto...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/commissionHistory
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/23 04:51:55 [error] [php] Undefined variable: viewType (C:\wamp\www\Network\protected\views\site\_commission.php:252)
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#9 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#10 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#11 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#12 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (252)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/23 05:01:07 [error] [php] Undefined variable: viewType (C:\wamp\www\Network\protected\views\site\_commission.php:252)
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): SiteController->renderPartial()
+#2 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#5 C:\wamp\www\Network\protected\views\site\myoffice.php(9): SiteController->renderPartial()
+#6 C:\wamp\www\Network\framework\web\CBaseController.php(126): require()
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#8 C:\wamp\www\Network\framework\web\CController.php(869): SiteController->renderFile()
+#9 C:\wamp\www\Network\framework\web\CController.php(782): SiteController->renderPartial()
+#10 C:\wamp\www\Network\protected\controllers\SiteController.php(61): SiteController->render()
+#11 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#12 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\wamp\www\Network\framework\web\CController.php(286): SiteController->runAction()
+#14 C:\wamp\www\Network\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#15 C:\wamp\www\Network\framework\web\CWebApplication.php(282): SiteController->run()
+#16 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\Network\index.php(13): CWebApplication->run()
+REQUEST_URI=/Network/site/myoffice
+in C:\wamp\www\Network\protected\views\site\_commission.php (252)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/23 05:01:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "commissionHistory".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('commissionHisto...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/commissionHistory
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/23 05:02:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "commissionHistory".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('commissionHisto...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/commissionHistory
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/23 05:02:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "commissionHistory".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('commissionHisto...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/commissionHistory
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/23 05:02:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "commissionHistory".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('commissionHisto...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/commissionHistory
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/23 05:03:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "commissionHistory".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('commissionHisto...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/commissionHistory
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
