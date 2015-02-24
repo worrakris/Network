@@ -155,7 +155,7 @@ class SiteController extends Controller {
             $model->signup_birthday = date('Y-m-d H:i:s', strtotime($model->signup_birthday));
 
             if ($model->validate()) {
-                // Generate Ref.No. & OTP 
+                // Generate Ref.No. & OTP
                 $today = time();
                 $tomorrow = mktime(date("H"), date("i"), date("s"), date("m"), date("d") + 1, date("Y"));
                 $validtime = date("m/d/Y h:i:s A", $tomorrow);
@@ -165,7 +165,6 @@ class SiteController extends Controller {
                 if ($model->save()) {
                     $refNo = $model->signup_id;
                     //$isSaved = TRUE;
-
                     // Send OTP Password
 //                $name = '=?UTF-8?B?' . base64_encode(Yii::t('emai;', 'sender')) . '?=';
 //                $subject = '=?UTF-8?B?' . base64_encode(Yii::t('email', 'subject_welcome')) . '?=';
@@ -173,7 +172,7 @@ class SiteController extends Controller {
 //                        "Reply-To: {$model->email}\r\n" .
 //                        "MIME-Version: 1.0\r\n" .
 //                        "Content-Type: text/plain; charset=UTF-8";
-//                
+//
 //                $otp_msg = Yii::t('email', 'msg_otp', array('{otppass}' => '123456', '{refno}' => '654321', '{validtime}' => $validtime));
 //
 //                mail($model->email, $subject, $model->body, $headers);
@@ -244,9 +243,13 @@ class SiteController extends Controller {
         }
         $this->renderPartial('_subscribe', array('model' => $model));
     }
-    
-    public function actionCommissionHistory() {   
-        $this->renderPartial("_commission_history", array('viewType' => $_POST['viewType'])); 
+
+    public function actionCommissionHistory() {
+        $this->renderPartial("_commission_history", array('viewType' => $_POST['viewType']));
+    }
+
+    public function actionShopProduct() {
+        $this->renderPartial("_shop_product", array('shop_id' => $_POST['shop_id']));
     }
 
 }

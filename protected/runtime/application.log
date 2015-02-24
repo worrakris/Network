@@ -34066,3 +34066,262 @@ Stack trace:
 REQUEST_URI=/Network/commissionHistory
 HTTP_REFERER=http://localhost/Network/site/myoffice
 ---
+2015/02/24 02:38:18 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'parent_id' in 'where clause'. The SQL statement executed was: SELECT member_id FROM `member_relationship` `t` WHERE parent_id = 1.
+in C:\wamp\www\Network\protected\views\site\_commission.php (120)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/02/24 02:38:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'parent_id' in 'where clause'. The SQL statement executed was: SELECT member_id FROM `member_relationship` `t` WHERE parent_id = 1' in C:\wamp\www\Network\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryAll()
+#2 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\Network\protected\views\site\_commission.php(120): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#5 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', NULL, true)
+#6 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', NULL, true)
+#7 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): CController->renderPartial('_commission')
+#8 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#9 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#10 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#11 C:\wamp\www\Network\protected\views\site\myoffice.php(9): CController->renderPartial('_myoffice', Array)
+#12 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#13 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#14 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#15 C:\wamp\www\Network\framework\web\CController.php(782): CController->renderPartial('myoffice', Array, true)
+#16 C:\wamp\www\Network\protected\controllers\SiteController.php(61): CController->render('myoffice', Array)
+#17 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#18 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\Network\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\Network\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('myoffice')
+#22 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/myoffice')
+#23 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\wamp\www\Network\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/Network/site/myoffice
+HTTP_REFERER=http://localhost/Network/
+---
+2015/02/24 02:52:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/member/m1/profile".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/member/m...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/member/m1/profile/
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/24 02:52:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "site".' in C:\wamp\www\Network\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(270): CController->missingAction('site')
+#1 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('site')
+#2 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/site/logou...')
+#3 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Network\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Network/site/site/logout
+HTTP_REFERER=http://localhost/Network/site/myoffice
+---
+2015/02/24 02:52:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/member/m1/profile".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/member/m...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/member/m1/profile/
+HTTP_REFERER=http://localhost/Network/site/site/logout
+---
+2015/02/24 05:55:03 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'city_if' in 'field list'. The SQL statement executed was: SELECT shop_name, shop_address, city_if, shop_tel, shop_fax, shop_email, shop_status FROM `shop_profile` `t` WHERE shop_id = 1 LIMIT 1.
+in C:\wamp\www\Network\protected\views\site\_shop_product.php (5)
+in C:\wamp\www\Network\protected\views\site\_shop.php (114)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+2015/02/24 05:55:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'city_if' in 'field list'. The SQL statement executed was: SELECT shop_name, shop_address, city_if, shop_tel, shop_fax, shop_email, shop_status FROM `shop_profile` `t` WHERE shop_id = 1 LIMIT 1' in C:\wamp\www\Network\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\Network\protected\views\site\_shop_product.php(5): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#5 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#6 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#7 C:\wamp\www\Network\protected\views\site\_shop.php(114): CController->renderPartial('_shop_product', Array)
+#8 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#9 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', NULL, true)
+#10 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', NULL, true)
+#11 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): CController->renderPartial('_shop')
+#12 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#13 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#14 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#15 C:\wamp\www\Network\protected\views\site\myoffice.php(9): CController->renderPartial('_myoffice', Array)
+#16 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#17 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#18 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#19 C:\wamp\www\Network\framework\web\CController.php(782): CController->renderPartial('myoffice', Array, true)
+#20 C:\wamp\www\Network\protected\controllers\SiteController.php(61): CController->render('myoffice', Array)
+#21 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#22 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 C:\wamp\www\Network\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#24 C:\wamp\www\Network\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('myoffice')
+#26 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/myoffice')
+#27 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\Network\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Network/site/myoffice?page=shop
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=commission
+---
+2015/02/24 07:02:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "shopproduct".' in C:\wamp\www\Network\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(270): CController->missingAction('shopproduct')
+#1 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('shopproduct')
+#2 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/shopProduc...')
+#3 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Network\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Network/site/shopProduct
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=shop
+---
+2015/02/24 07:02:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "shopproduct".' in C:\wamp\www\Network\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(270): CController->missingAction('shopproduct')
+#1 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('shopproduct')
+#2 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/shopProduc...')
+#3 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Network\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Network/site/shopProduct
+---
+2015/02/24 07:04:37 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SH2' in 'where clause'. The SQL statement executed was: SELECT shop_name, shop_address, city_id, shop_tel, shop_fax, shop_email, shop_status FROM `shop_profile` `t` WHERE shop_id = SH2 LIMIT 1.
+in C:\wamp\www\Network\protected\views\site\_shop_product.php (5)
+in C:\wamp\www\Network\protected\controllers\SiteController.php (252)
+in C:\wamp\www\Network\index.php (13)
+2015/02/24 07:04:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SH2' in 'where clause'. The SQL statement executed was: SELECT shop_name, shop_address, city_id, shop_tel, shop_fax, shop_email, shop_status FROM `shop_profile` `t` WHERE shop_id = SH2 LIMIT 1' in C:\wamp\www\Network\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\Network\protected\views\site\_shop_product.php(5): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#5 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#6 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#7 C:\wamp\www\Network\protected\controllers\SiteController.php(252): CController->renderPartial('_shop_product', Array)
+#8 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionShopProduct()
+#9 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\Network\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\Network\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('shopproduct')
+#13 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/shopProduc...')
+#14 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\Network\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Network/site/shopProduct
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=shop
+---
+2015/02/24 07:06:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "_shop_product.php".' in C:\wamp\www\Network\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(270): CController->missingAction('_shop_product.p...')
+#1 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('_shop_product.p...')
+#2 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/_shop_prod...')
+#3 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Network\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Network/site/_shop_product.php
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=shop
+---
+2015/02/24 07:09:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "shopproduct".' in C:\wamp\www\Network\framework\web\CController.php:483
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CController.php(270): CController->missingAction('shopproduct')
+#1 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('shopproduct')
+#2 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/shopProduc...')
+#3 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\wamp\www\Network\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/Network/site/shopProduct
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=shop
+---
+2015/02/24 07:10:04 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SH2' in 'where clause'. The SQL statement executed was: SELECT shop_name, shop_address, city_id, shop_tel, shop_fax, shop_email, shop_status FROM `shop_profile` `t` WHERE shop_id = SH2 LIMIT 1.
+in C:\wamp\www\Network\protected\views\site\_shop_product.php (5)
+in C:\wamp\www\Network\protected\controllers\SiteController.php (252)
+in C:\wamp\www\Network\index.php (13)
+2015/02/24 07:10:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SH2' in 'where clause'. The SQL statement executed was: SELECT shop_name, shop_address, city_id, shop_tel, shop_fax, shop_email, shop_status FROM `shop_profile` `t` WHERE shop_id = SH2 LIMIT 1' in C:\wamp\www\Network\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\Network\protected\views\site\_shop_product.php(5): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#5 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#6 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#7 C:\wamp\www\Network\protected\controllers\SiteController.php(252): CController->renderPartial('_shop_product', Array)
+#8 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionShopProduct()
+#9 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\Network\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\Network\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('shopproduct')
+#13 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/shopProduc...')
+#14 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\Network\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Network/site/shopProduct
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=shop
+---
+2015/02/24 07:11:20 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SH2' in 'where clause'. The SQL statement executed was: SELECT shop_name, shop_address, city_id, shop_tel, shop_fax, shop_email, shop_status FROM `shop_profile` `t` WHERE shop_id = SH2 LIMIT 1.
+in C:\wamp\www\Network\protected\views\site\_shop_product.php (5)
+in C:\wamp\www\Network\protected\controllers\SiteController.php (252)
+in C:\wamp\www\Network\index.php (13)
+2015/02/24 07:11:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'SH2' in 'where clause'. The SQL statement executed was: SELECT shop_name, shop_address, city_id, shop_tel, shop_fax, shop_email, shop_status FROM `shop_profile` `t` WHERE shop_id = SH2 LIMIT 1' in C:\wamp\www\Network\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\CDbCommand.php(415): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1351): CDbCommand->queryRow()
+#2 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\Network\protected\views\site\_shop_product.php(5): CActiveRecord->find(Object(CDbCriteria))
+#4 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#5 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#6 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#7 C:\wamp\www\Network\protected\controllers\SiteController.php(252): CController->renderPartial('_shop_product', Array)
+#8 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionShopProduct()
+#9 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\Network\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\Network\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('shopproduct')
+#13 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/shopProduc...')
+#14 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\wamp\www\Network\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/Network/site/shopProduct
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=shop
+---
+2015/02/24 10:46:08 [error] [exception.CException] exception 'CException' with message 'Property "CDbCriteria.shop_id" is not defined.' in C:\wamp\www\Network\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\schema\CDbCriteria.php(160): CComponent->__set('shop_id', '1')
+#1 C:\wamp\www\Network\framework\db\schema\CDbCommandBuilder.php(585): CDbCriteria->__construct(Array)
+#2 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1469): CDbCommandBuilder->createCriteria(Array, Array)
+#3 C:\wamp\www\Network\protected\views\site\_shop_product.php(18): CActiveRecord->findAll(Array)
+#4 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#5 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#6 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#7 C:\wamp\www\Network\protected\views\site\_shop.php(114): CController->renderPartial('_shop_product', Array)
+#8 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#9 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', NULL, true)
+#10 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', NULL, true)
+#11 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): CController->renderPartial('_shop')
+#12 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#13 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#14 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#15 C:\wamp\www\Network\protected\views\site\myoffice.php(9): CController->renderPartial('_myoffice', Array)
+#16 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#17 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#18 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#19 C:\wamp\www\Network\framework\web\CController.php(782): CController->renderPartial('myoffice', Array, true)
+#20 C:\wamp\www\Network\protected\controllers\SiteController.php(61): CController->render('myoffice', Array)
+#21 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#22 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#23 C:\wamp\www\Network\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#24 C:\wamp\www\Network\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('myoffice')
+#26 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/myoffice')
+#27 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\wamp\www\Network\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/Network/site/myoffice?page=shop
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=commission
+---

@@ -95,12 +95,21 @@
         padding: 3px;
         //display: inline-block;
         text-align: center;
+        position: relative;
     }
 
     .img_comm {
-        position: relative; 
-        top: 0; 
+        position: absolute;
+        top: 0;
         left: 0;
+    }
+
+    .comm_container {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 300px;
     }
 
 </style>
@@ -143,7 +152,7 @@ $comm_apx_cpv = 1650;
             <div class="profile-img-container">
                 <?php if (!empty($member->member_pic_profile)) { ?>
                     <img src="<?php echo Yii::app()->baseUrl . "/images/member/m" . Yii::app()->user->id . "/profile/" . Yii::app()->user->picture; ?>" class="img-thumbnail img-responsive img-polaroid" />
-                     <?php } else { ?>
+                <?php } else { ?>
 
                 <?php } ?>
                 <a href="#"><span class="fa fa-camera fa-2x fa-inverse"></span></a>
@@ -153,7 +162,7 @@ $comm_apx_cpv = 1650;
             <table>
                 <tr>
                     <td><strong><?php echo Yii::t('myoffice', 'label_member_name'); ?>:&nbsp;</strong></td>
-                    <td>            
+                    <td>
                         <?php
                         echo $member->member_firstname . " " . $member->member_middlename . " " . $member->member_lastname;
                         ?>
@@ -169,7 +178,7 @@ $comm_apx_cpv = 1650;
                 </tr>
                 <tr>
                     <td><strong><?php echo Yii::t('myoffice', 'label_member_upline'); ?>:&nbsp;</strong></td>
-                    <td>            
+                    <td>
                         <?php
                         if (!empty($upline)) {
                             echo $father->member_firstname . " " . $father->member_middlename . " " . $father->member_lastname;
@@ -199,9 +208,9 @@ $comm_apx_cpv = 1650;
         <div align="left" class="txt__home-sub-head"><?php echo Yii::t('myoffice', 'title_commission'); ?></div>
         <br/>
         <div class="row" style="width: 100%; display: inline-block; text-align: center">
-            <div style="width: 90%; display: inline-block; text-align: center">
+            <div style="width: 90%; display: inline-block; text-align: center; position: relative">
                 <div class="col-lg-4 col-md-4 col-sm-1 comm_box">
-                    <div style="display: relative; top: 0; left: 0;">
+                    <div class="comm_container">
                         <img src="<?php echo Yii::app()->baseUrl . "/images/site/ep_box.png"; ?>" class="img_comm" />
                         <img src="<?php echo Yii::app()->baseUrl . "/images/site/ep-red.png"; ?>" style="position: absolute; top: 70px; left: 97px; z-index: 99" />
                         <div style="position: absolute; top: 70px; left: 97px; line-height: 124px; width: 112px; z-index: 100; font-size: 4.5rem; color: #FFF;">EP</div>
@@ -209,7 +218,7 @@ $comm_apx_cpv = 1650;
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-1 comm_box">
-                    <div style="display: relative; top: 0; left: 0;">
+                    <div class="comm_container">
                         <img src="<?php echo Yii::app()->baseUrl . "/images/site/desc_box.png"; ?>" class='img_comm' />
                         <div style="position: absolute; top: 20px; left: 0; text-align: center;  line-height: 124px; width: 300px; z-index: 100; font-size: 2.5rem; color: #FFF;"><?php echo Yii::t('myoffice', 'msg_commission'); ?></div>
                         <div style="position: absolute; top: 65px; left: 0px; text-align: center;  line-height: 124px; width: 300px; z-index: 101; font-size: 2.5rem; color: #FFF;"><?php echo number_format($comm_cpv); ?> <span style="font-size: 1.5rem">CPV</span></div>
@@ -218,7 +227,7 @@ $comm_apx_cpv = 1650;
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-1 comm_box">
-                    <div style="display: relative; top: 0; left: 0;">
+                    <div class="comm_container">
                         <img src="<?php echo Yii::app()->baseUrl . "/images/site/desc_box.png"; ?>" class="img_comm" />
                         <div style="position: absolute; top: 20px; left: 0; text-align: center;  line-height: 124px; width: 300px; z-index: 100; font-size: 2.5rem; color: #FFF;"><?php echo Yii::t('myoffice', 'msg_total_child'); ?></div>
                         <div style="position: absolute; top: 65px; left: 0px; text-align: center;  line-height: 124px; width: 300px; z-index: 101; font-size: 2.5rem; color: #FFF;"><?php echo $cntChild; ?></div>
