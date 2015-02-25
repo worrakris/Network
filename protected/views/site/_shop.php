@@ -42,6 +42,14 @@
         color: green;
     }
 
+    .change-shop-default {
+        position: absolute;
+        right: 8px;
+        bottom: 5px;
+        color: grey;
+        cursor: pointer;
+    }
+
     .link-button {
         display: inline-block;
         line-height: 2.8rem;
@@ -64,10 +72,14 @@
 </style>
 
 <?php
+$criteria = new CDbCriteria();
+$criteria->select = 'shop_id';
+$criteria->condition = 'member_id=' . Yii::app()->user->id;
+$defaultLocation = Member::model()->with('defaultLocation')->find($criteria);
 $shopList = ShopProfile::model()->findAllByAttributes(array('creator_id' => Yii::app()->user->id));
 $cntShop = count($shopList);
 $firstShop = $shopList[0]->shop_id;
-$defaultShop = 1;
+$defaultShop = $defaultLocation->shop_id;
 ?>
 
 <section id="my_shop">
@@ -106,7 +118,7 @@ $defaultShop = 1;
                             <?php if ($shopList[$ndx]->shop_id == $defaultShop) { ?>
                                 <span class="fa fa-check-circle-o fa-3x shop-default" title="<?php echo Yii::t('myoffice', 'tips_default_shop'); ?>"></span>
                             <?php } else { ?>
-                                <span class="fa fa-circle-o fa-3x shop-default" title="<?php echo Yii::t('myoffice', 'tips_change_default_shop'); ?>"></span>
+                                <span class="fa fa-circle-o fa-3x change-shop-default" title="<?php echo Yii::t('myoffice', 'tips_change_default_shop'); ?>"></span>
                             <?php } ?>
                         </div>
                     <?php } ?>

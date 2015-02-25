@@ -4,6 +4,25 @@
         display: inline-block;
         text-align: center
     }
+
+    .product-item-box {
+        position: relative;
+        padding: 5px;
+        margin: 8px;
+        border: #888 solid thin;
+        border-radius: 5px;
+        //width: 20%;
+        min-width: 130px;
+        //height: 120px;
+        background-color: whitesmoke;
+        float: left;
+        display: inline-block;
+    }
+
+    .product_image {
+        position: relative;
+        padding: 20px;
+    }
 </style>
 
 <?php
@@ -35,7 +54,15 @@ $cntProduct = count($productInfo);
 <br/>
 
 <div class="product-item-list">
-
+    <div class="product-item-box">
+        <img src="<?php echo Yii::app()->baseUrl . "/images/site/1.png"; ?>" class="product_image" />
+    </div>
+    <div class="product-item-box"></div>
+    <div class="product-item-box"></div>
+    <div class="product-item-box"></div>
+    <div class="product-item-box"></div>
+    <div class="product-item-box"></div>
+    <div class="product-item-box"></div>
 </div>
 <?php
 echo $shop_id

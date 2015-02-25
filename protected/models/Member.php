@@ -29,6 +29,7 @@
  * @property string $member_update_date
  * @property string $member_status
  * @property string $member_default_language
+ * @property string $shop_id
  */
 class Member extends CActiveRecord {
 
@@ -46,7 +47,7 @@ class Member extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('member_firstname, member_lastname, member_name_oncheque, member_contact_person, member_company_email, member_company_address, member_business_phone', 'required'),
+            array('member_firstname, member_lastname, member_name_oncheque, member_contact_person, member_company_email, member_company_address, member_business_phone, shop_id', 'required'),
             array('member_firstname, member_middlename, member_lastname, member_skype_account', 'length', 'max' => 100),
             array('member_pic_profile, member_name_onwebsite, member_name_oncheque', 'length', 'max' => 255),
             array('member_company_name', 'length', 'max' => 250),
@@ -58,7 +59,7 @@ class Member extends CActiveRecord {
             array('member_birthday, member_create_date, member_update_date', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('member_id, member_firstname, member_middlename, member_lastname, member_birthday, member_pic_profile, member_company_name, member_name_onwebsite, member_name_oncheque, member_contact_person, member_company_email, member_company_address, member_home_phone, member_business_phone, member_fax_number, member_language, member_receive_email, member_email_format, member_sms_phone, member_receive_sms, member_skype_account, member_create_date, member_update_date, member_status, member_default_language', 'safe', 'on' => 'search'),
+            array('member_id, member_firstname, member_middlename, member_lastname, member_birthday, member_pic_profile, member_company_name, member_name_onwebsite, member_name_oncheque, member_contact_person, member_company_email, member_company_address, member_home_phone, member_business_phone, member_fax_number, member_language, member_receive_email, member_email_format, member_sms_phone, member_receive_sms, member_skype_account, member_create_date, member_update_date, member_status, member_default_language, shop_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -69,7 +70,8 @@ class Member extends CActiveRecord {
         // NOTE: you may need to adjust the relation name and the related
         // class name for the relations automatically generated below.
         return array(
-            'userAccount' => array(self::HAS_ONE, 'UserAccount', array('user_id'=>'member_id')),
+            'userAccount' => array(self::HAS_ONE, 'UserAccount', array('user_id' => 'member_id')),
+            'defaultLocation' => array(self::HAS_ONE, 'ShopProfile', 'shop_id'),
         );
     }
 
@@ -103,6 +105,7 @@ class Member extends CActiveRecord {
             'member_update_date' => 'Member Update Date',
             'member_status' => 'Member Status',
             'member_default_language' => 'Member Default Language',
+            'shop_id' => 'Default Shop',
         );
     }
 
@@ -148,7 +151,7 @@ class Member extends CActiveRecord {
         $criteria->compare('member_update_date', $this->member_update_date, true);
         $criteria->compare('member_status', $this->member_status, true);
         $criteria->compare('member_default_language', $this->member_default_language, true);
-
+        $criteria->compare('shop_id', $this->shop_id, true);
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));

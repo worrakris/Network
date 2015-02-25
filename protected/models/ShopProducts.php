@@ -11,6 +11,7 @@
  * @property string $rental_status
  * @property string $create_date
  * @property string $update_date
+ * @property string $expire_date
  */
 class ShopProducts extends CActiveRecord {
 
@@ -36,7 +37,7 @@ class ShopProducts extends CActiveRecord {
             array('create_date, update_date', 'safe'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
-            array('shop_product_id, shop_id, products_id, shop_product_serial_key, rental_status, create_date, update_date', 'safe', 'on' => 'search'),
+            array('shop_product_id, shop_id, products_id, shop_product_serial_key, rental_status, create_date, update_date, expire_date', 'safe', 'on' => 'search'),
         );
     }
 
@@ -63,6 +64,7 @@ class ShopProducts extends CActiveRecord {
             'rental_status' => 'Rental Status',
             'create_date' => 'Create Date',
             'update_date' => 'Update Date',
+            'expire_date' => 'Expired Date',
         );
     }
 
@@ -90,7 +92,7 @@ class ShopProducts extends CActiveRecord {
         $criteria->compare('rental_status', $this->rental_status, true);
         $criteria->compare('create_date', $this->create_date, true);
         $criteria->compare('update_date', $this->update_date, true);
-
+        $criteria->compare('expire_date', $this->expire_date, true);
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
