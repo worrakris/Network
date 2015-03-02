@@ -1,28 +1,4 @@
 <style>
-    .red_circle {
-        width: 26px;
-        height: 26px;
-        border-radius: 13px;
-        background-color: red;
-        border: 4px solid #FF7A7A;
-        float: left;
-    }
-
-    .green_circle {
-        width: 26px;
-        height: 26px;
-        border-radius: 13px;
-        background-color: #70FF00;
-        border: 4px solid #64C32F;
-        float: left;
-    }
-
-    .status_box {
-        font-weight: bold;
-        display: inline-block;
-        vertical-align: middle;
-    }
-
     .profile_img {
         position: relative;
         display: inline-block; /* added */
