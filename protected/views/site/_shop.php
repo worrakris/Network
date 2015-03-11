@@ -5,7 +5,7 @@
         margin: 8px;
         border: #888 solid thin;
         border-radius: 5px;
-        width: 31%;
+        min-width: 300px;
         height: 120px;
         background-color: whitesmoke;
         float: left;

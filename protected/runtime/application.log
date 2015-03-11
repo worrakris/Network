@@ -34600,3 +34600,67 @@ REQUEST_URI=/Network/site/myoffice?page=shop
 in C:\wamp\www\Network\protected\views\site\_shop_product.php (70)
 in C:\wamp\www\Network\protected\views\site\_shop.php (131)
 in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+2015/03/02 04:30:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/site/.png".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/site/.pn...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/site/.png
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=shop
+---
+2015/03/02 04:30:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/site/.png".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/site/.pn...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/site/.png
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=shop
+---
+2015/03/02 04:30:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/site/.png".' in C:\wamp\www\Network\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('images/site/.pn...')
+#1 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\wamp\www\Network\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/Network/images/site/.png
+HTTP_REFERER=http://localhost/Network/site/myoffice?page=shop
+---
+2015/03/02 04:39:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.' in 'on clause'. The SQL statement executed was: SELECT `t`.`shop_id` AS `t0_c25`, `defaultLocation`.`shop_id` AS `t1_c0`, `defaultLocation`.`shop_name` AS `t1_c1`, `defaultLocation`.`shop_logo` AS `t1_c2`, `defaultLocation`.`shop_address` AS `t1_c3`, `defaultLocation`.`city_id` AS `t1_c4`, `defaultLocation`.`province_id` AS `t1_c5`, `defaultLocation`.`country_id` AS `t1_c6`, `defaultLocation`.`shop_tel` AS `t1_c7`, `defaultLocation`.`shop_fax` AS `t1_c8`, `defaultLocation`.`shop_email` AS `t1_c9`, `defaultLocation`.`shop_website` AS `t1_c10`, `defaultLocation`.`shop_description` AS `t1_c11`, `defaultLocation`.`shop_default_map` AS `t1_c12`, `defaultLocation`.`shop_map` AS `t1_c13`, `defaultLocation`.`shop_google_map` AS `t1_c14`, `defaultLocation`.`shop_cfg_opentime` AS `t1_c15`, `defaultLocation`.`shop_cfg_closetime` AS `t1_c16`, `defaultLocation`.`shop_opt_capacity` AS `t1_c17`, `defaultLocation`.`shop_opt_creditcard` AS `t1_c18`, `defaultLocation`.`shop_opt_creditcard_desc` AS `t1_c19`, `defaultLocation`.`shop_opt_access` AS `t1_c20`, `defaultLocation`.`shop_opt_parking` AS `t1_c21`, `defaultLocation`.`shop_opt_private` AS `t1_c22`, `defaultLocation`.`shop_opt_reservation` AS `t1_c23`, `defaultLocation`.`shop_opt_smoking` AS `t1_c24`, `defaultLocation`.`shop_cfg_timezone` AS `t1_c25`, `defaultLocation`.`shop_cfg_default_language` AS `t1_c26`, `defaultLocation`.`shop_cfg_datetime_format` AS `t1_c27`, `defaultLocation`.`shop_cfg_currency` AS `t1_c28`, `defaultLocation`.`shop_cfg_daily_closebook` AS `t1_c29`, `defaultLocation`.`shop_cfg_daily_close_book_time` AS `t1_c30`, `defaultLocation`.`shop_create_date` AS `t1_c31`, `defaultLocation`.`shop_update_date` AS `t1_c32`, `defaultLocation`.`shop_status` AS `t1_c33`, `defaultLocation`.`creator_id` AS `t1_c34` FROM `member` `t`  LEFT OUTER JOIN `shop_profile` `defaultLocation` ON (`defaultLocation`.`shop_id`=`t`.``)  WHERE (member_id=2).
+in C:\wamp\www\Network\protected\views\site\_shop.php (78)
+in C:\wamp\www\Network\protected\views\site\_myoffice.php (70)
+in C:\wamp\www\Network\protected\views\site\myoffice.php (9)
+2015/03/02 04:39:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 't.' in 'on clause'. The SQL statement executed was: SELECT `t`.`shop_id` AS `t0_c25`, `defaultLocation`.`shop_id` AS `t1_c0`, `defaultLocation`.`shop_name` AS `t1_c1`, `defaultLocation`.`shop_logo` AS `t1_c2`, `defaultLocation`.`shop_address` AS `t1_c3`, `defaultLocation`.`city_id` AS `t1_c4`, `defaultLocation`.`province_id` AS `t1_c5`, `defaultLocation`.`country_id` AS `t1_c6`, `defaultLocation`.`shop_tel` AS `t1_c7`, `defaultLocation`.`shop_fax` AS `t1_c8`, `defaultLocation`.`shop_email` AS `t1_c9`, `defaultLocation`.`shop_website` AS `t1_c10`, `defaultLocation`.`shop_description` AS `t1_c11`, `defaultLocation`.`shop_default_map` AS `t1_c12`, `defaultLocation`.`shop_map` AS `t1_c13`, `defaultLocation`.`shop_google_map` AS `t1_c14`, `defaultLocation`.`shop_cfg_opentime` AS `t1_c15`, `defaultLocation`.`shop_cfg_closetime` AS `t1_c16`, `defaultLocation`.`shop_opt_capacity` AS `t1_c17`, `defaultLocation`.`shop_opt_creditcard` AS `t1_c18`, `defaultLocation`.`shop_opt_creditcard_desc` AS `t1_c19`, `defaultLocation`.`shop_opt_access` AS `t1_c20`, `defaultLocation`.`shop_opt_parking` AS `t1_c21`, `defaultLocation`.`shop_opt_private` AS `t1_c22`, `defaultLocation`.`shop_opt_reservation` AS `t1_c23`, `defaultLocation`.`shop_opt_smoking` AS `t1_c24`, `defaultLocation`.`shop_cfg_timezone` AS `t1_c25`, `defaultLocation`.`shop_cfg_default_language` AS `t1_c26`, `defaultLocation`.`shop_cfg_datetime_format` AS `t1_c27`, `defaultLocation`.`shop_cfg_currency` AS `t1_c28`, `defaultLocation`.`shop_cfg_daily_closebook` AS `t1_c29`, `defaultLocation`.`shop_cfg_daily_close_book_time` AS `t1_c30`, `defaultLocation`.`shop_create_date` AS `t1_c31`, `defaultLocation`.`shop_update_date` AS `t1_c32`, `defaultLocation`.`shop_status` AS `t1_c33`, `defaultLocation`.`creator_id` AS `t1_c34` FROM `member` `t`  LEFT OUTER JOIN `shop_profile` `defaultLocation` ON (`defaultLocation`.`shop_id`=`t`.``)  WHERE (member_id=2)' in C:\wamp\www\Network\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\wamp\www\Network\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\Network\framework\db\ar\CActiveFinder.php(803): CDbCommand->queryAll()
+#2 C:\wamp\www\Network\framework\db\ar\CActiveFinder.php(437): CJoinElement->runQuery(Object(CJoinQuery))
+#3 C:\wamp\www\Network\framework\db\ar\CActiveFinder.php(68): CJoinElement->find(Object(CDbCriteria))
+#4 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1356): CActiveFinder->query(Object(CDbCriteria), false)
+#5 C:\wamp\www\Network\framework\db\ar\CActiveRecord.php(1456): CActiveRecord->query(Object(CDbCriteria))
+#6 C:\wamp\www\Network\protected\views\site\_shop.php(78): CActiveRecord->find(Object(CDbCriteria))
+#7 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#8 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', NULL, true)
+#9 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', NULL, true)
+#10 C:\wamp\www\Network\protected\views\site\_myoffice.php(70): CController->renderPartial('_shop')
+#11 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#12 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#13 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#14 C:\wamp\www\Network\protected\views\site\myoffice.php(9): CController->renderPartial('_myoffice', Array)
+#15 C:\wamp\www\Network\framework\web\CBaseController.php(126): require('C:\wamp\www\Net...')
+#16 C:\wamp\www\Network\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\Net...', Array, true)
+#17 C:\wamp\www\Network\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\Net...', Array, true)
+#18 C:\wamp\www\Network\framework\web\CController.php(782): CController->renderPartial('myoffice', Array, true)
+#19 C:\wamp\www\Network\protected\controllers\SiteController.php(61): CController->render('myoffice', Array)
+#20 C:\wamp\www\Network\framework\web\actions\CInlineAction.php(49): SiteController->actionMyoffice()
+#21 C:\wamp\www\Network\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\Network\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\Network\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\Network\framework\web\CWebApplication.php(282): CController->run('myoffice')
+#25 C:\wamp\www\Network\framework\web\CWebApplication.php(141): CWebApplication->runController('site/myoffice')
+#26 C:\wamp\www\Network\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 C:\wamp\www\Network\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/Network/site/myoffice?page=shop
+---
